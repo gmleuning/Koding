@@ -63,7 +63,15 @@ export default class KodingPlugin extends Plugin {
     this.app.workspace.onLayoutReady(async () => {
       await this.setupVault(false);
       await this.checkInbox();
-      if (this.settings.openDeskOnStartup) await this.openDesk();
+      if (this.settings.openDeskOnStartup) {
+        await this.openDesk();
+        // the AI tab sits in the right column; open the first bookmark there if none is open yet
+        const b = this.defaultBookmark();
+        if (b && b.mode === "tab" && !this.app.workspace.getLeavesOfType(AI_VIEW).length) {
+          await this.openBookmark(b);
+          await this.openDesk();
+        }
+      }
       this.syncActions();
       this.watch();
       this.resetInboxTimer();
