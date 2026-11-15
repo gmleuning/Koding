@@ -1,0 +1,399 @@
+/* Koding */
+
+.koding-desk {
+  max-width: 34rem;
+  margin: 3rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.koding-desk button,
+.koding-archive button,
+.koding-shadow button,
+.koding-ai-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+}
+
+.koding-icon {
+  display: inline-flex;
+}
+
+button.koding-next {
+  height: auto;
+  padding: 1.6rem 1.2rem;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-radius: var(--radius-l);
+  white-space: normal;
+}
+
+.koding-next-label {
+  font-size: 1.5rem;
+  font-weight: var(--font-semibold);
+}
+
+.koding-next-detail {
+  font-size: var(--font-ui-medium);
+  opacity: 0.85;
+}
+
+.koding-quiet {
+  align-self: center;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  margin-top: -0.4rem;
+}
+
+button.koding-listen {
+  align-self: center;
+}
+
+.koding-section {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 0.9rem;
+}
+
+.koding-section h4 {
+  margin: 0 0 0.6rem;
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-medium);
+  color: var(--text-muted);
+  text-transform: none;
+}
+
+.koding-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.koding-aibar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.koding-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.koding-phone-name {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.koding-phone audio,
+.koding-player audio {
+  width: 100%;
+  height: 2.2rem;
+}
+
+.koding-handful-item {
+  font-size: 1.25rem;
+  line-height: 1.9;
+}
+
+.koding-handful-item strong {
+  color: var(--text-accent);
+}
+
+.koding-hint {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Step bar at the top of a voice note */
+
+.workspace-leaf-content:has(> .koding-steps) {
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-leaf-content:has(> .koding-steps) > .view-content {
+  flex: 1 1 0;
+  min-height: 0;
+  height: auto;
+}
+
+.koding-steps {
+  flex: 0 0 auto;
+  padding: 0.6rem 1rem 0.8rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.koding-steps-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-ui-smaller);
+}
+
+.koding-step {
+  padding: 0.1rem 0.55rem;
+  border-radius: 1rem;
+  color: var(--text-faint);
+}
+
+.koding-step.is-link {
+  cursor: pointer;
+}
+
+.koding-step.is-link:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.koding-step.is-past {
+  color: var(--text-muted);
+}
+
+.koding-step.is-current {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: var(--font-semibold);
+}
+
+.koding-steps .koding-more {
+  margin-left: auto;
+}
+
+.koding-steps-msg {
+  font-size: var(--font-ui-medium);
+  line-height: 1.45;
+}
+
+/* AI tab */
+
+.koding-ai {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.koding-ai-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.koding-spacer {
+  flex: 1;
+}
+
+.koding-webview {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+/* Shadow player */
+
+.koding-shadow,
+.koding-archive {
+  max-width: 40rem;
+  margin: 1.5rem auto;
+}
+
+.koding-shadow button.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.koding-sentences {
+  margin-top: 1rem;
+}
+
+.koding-sentence {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  padding: 0.45rem 0.7rem;
+  border-radius: var(--radius-m);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.koding-sentence:hover {
+  background: var(--background-modifier-hover);
+}
+
+.koding-sentence.is-current {
+  border-left-color: var(--interactive-accent);
+  background: var(--background-secondary);
+}
+
+/* Archive */
+
+.koding-player {
+  position: sticky;
+  top: 0;
+  background: var(--background-primary);
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.koding-now {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  min-height: 1.2em;
+}
+
+.koding-now-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 9rem;
+  overflow-y: auto;
+}
+
+.koding-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.koding-entry-date {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+
+.koding-entry-title {
+  flex: 1;
+  min-width: 8rem;
+}
+
+/* Quiz pane */
+
+.koding-quiz-view:focus {
+  outline: none;
+}
+
+.koding-quiz {
+  max-width: 36rem;
+  margin: 3rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.koding-quiz-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+}
+
+.koding-quiz-from {
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.koding-quiz-front,
+.koding-quiz-back {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.koding-quiz-back {
+  padding-top: 1rem;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.koding-quiz-back strong {
+  color: var(--text-accent);
+}
+
+.koding-blank {
+  display: inline-block;
+  min-width: 3.5em;
+  padding: 0 0.5em;
+  margin: 0 0.15em;
+  border-bottom: 2px solid var(--interactive-accent);
+  color: var(--text-muted);
+  font-size: 0.75em;
+  text-align: center;
+}
+
+input.koding-quiz-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.koding-quiz-typed {
+  color: var(--text-muted);
+}
+
+.koding-quiz-buttons button {
+  min-width: 7rem;
+}
+
+.koding-quiz-end {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Recording, in the status bar */
+
+.koding-rec-status {
+  color: var(--text-error);
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Settings and prompts */
+
+.koding-bookmark-row .setting-item-info {
+  display: none;
+}
+
+.koding-bookmark-row .setting-item-control {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.koding-bookmark-row input.koding-url {
+  flex: 1;
+  min-width: 12rem;
+}
+
+textarea.koding-wide {
+  width: 100%;
+  min-width: 18rem;
+}
+
+input.koding-prompt {
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}

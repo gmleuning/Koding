@@ -1,0 +1,9 @@
+{
+  "id": "koding",
+  "name": "Koding",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "A study desk built around one activity: making a short voice note for someone who will hear it.",
+  "author": "gmleuning",
+  "isDesktopOnly": true
+}
